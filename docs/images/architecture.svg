@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" width="100%" height="100%" style="background:#ffffff; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <filter id="softShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0f172a" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="640" fill="#ffffff"/>
+
+  <!-- Top Title Bar -->
+  <rect x="40" y="24" width="1120" height="60" rx="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5" filter="url(#softShadow)"/>
+  <text x="70" y="60" fill="#0f172a" font-size="20" font-weight="700" letter-spacing="0.3">AWS Cloud FinOps &amp; Cost Governance Automation Architecture</text>
+  <rect x="830" y="40" width="100" height="26" rx="13" fill="#ecfdf5" stroke="#10b981" stroke-width="1"/>
+  <text x="842" y="58" fill="#047857" font-size="12" font-weight="600">COST OPTIMIZED</text>
+  <rect x="940" y="40" width="90" height="26" rx="13" fill="#eff6ff" stroke="#3b82f6" stroke-width="1"/>
+  <text x="955" y="58" fill="#1d4ed8" font-size="12" font-weight="600">AWS FINOPS</text>
+  <rect x="1040" y="40" width="90" height="26" rx="13" fill="#faf5ff" stroke="#a855f7" stroke-width="1"/>
+  <text x="1062" y="58" fill="#7e22ce" font-size="12" font-weight="600">PYTHON</text>
+
+  <!-- COLUMN 1: Resource Discovery & Ingestion -->
+  <rect x="40" y="110" width="350" height="490" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#softShadow)"/>
+  <rect x="40" y="110" width="350" height="40" rx="8" fill="#f1f5f9"/>
+  <text x="60" y="136" fill="#0284c7" font-size="13" font-weight="700">1. RESOURCE DISCOVERY &amp; AUDIT</text>
+
+  <rect x="60" y="170" width="310" height="90" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="75" y="198" fill="#0f172a" font-size="14" font-weight="600">Unattached EBS Volume Scanner</text>
+  <text x="75" y="222" fill="#475569" font-size="11">• Filters volumes in `available` state across AWS regions</text>
+  <text x="75" y="242" fill="#64748b" font-size="11">• Evaluates size (GB), IOPS provisioned, and gp2/gp3 tiers</text>
+
+  <rect x="60" y="275" width="310" height="90" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="75" y="303" fill="#0f172a" font-size="14" font-weight="600">Idle Elastic IP (EIP) Leak Detector</text>
+  <text x="75" y="327" fill="#475569" font-size="11">• Identifies allocated public IPs without EC2 association</text>
+  <text x="75" y="347" fill="#64748b" font-size="11">• Eliminates non-associated hourly idle IP charges ($0.005/hr)</text>
+
+  <rect x="60" y="380" width="310" height="90" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="75" y="408" fill="#0f172a" font-size="14" font-weight="600">RDS Idle Database &amp; Snapshot Auditor</text>
+  <text x="75" y="432" fill="#475569" font-size="11">• Detects zero-connection RDS / Aurora instances</text>
+  <text x="75" y="452" fill="#64748b" font-size="11">• Enforces retention policies on stale manual DB snapshots</text>
+
+  <rect x="60" y="485" width="310" height="95" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="75" y="513" fill="#0f172a" font-size="14" font-weight="600">AWS Cost Explorer &amp; CUR Telemetry</text>
+  <text x="75" y="537" fill="#475569" font-size="11">• Continuous Cost and Usage Report (CUR) ingestion</text>
+  <text x="75" y="557" fill="#64748b" font-size="11">• Multi-account AWS Organizations consolidated billing view</text>
+
+  <!-- COLUMN 2: Python FinOps Engine -->
+  <rect x="420" y="110" width="380" height="490" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#softShadow)"/>
+  <rect x="420" y="110" width="380" height="40" rx="8" fill="#f1f5f9"/>
+  <text x="440" y="136" fill="#d97706" font-size="13" font-weight="700">2. PYTHON BOTO3 FINOPS ENGINE</text>
+
+  <rect x="440" y="170" width="340" height="120" rx="6" fill="#f8fafc" stroke="#fed7aa" stroke-width="1"/>
+  <text x="455" y="198" fill="#c2410c" font-size="13" font-weight="600">Cost Optimization Rule Matcher</text>
+  <text x="455" y="224" fill="#475569" font-size="11">• Automated calculation of monthly cost waste per resource</text>
+  <text x="455" y="244" fill="#475569" font-size="11">• gp2 to gp3 automated storage migration evaluation</text>
+  <text x="455" y="264" fill="#64748b" font-size="10">• Savings Plans &amp; Reserved Instances commitment balancing</text>
+
+  <rect x="440" y="305" width="340" height="135" rx="6" fill="#f8fafc" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="455" y="333" fill="#1d4ed8" font-size="13" font-weight="600">Safety Guardrails &amp; Remediation Workflow</text>
+  <text x="455" y="359" fill="#475569" font-size="11">• Dry-run validation prior to any destructive actions</text>
+  <text x="455" y="379" fill="#475569" font-size="11">• Tag-based exemptions (`finops:ignore`, `env:prod` protection)</text>
+  <text x="455" y="399" fill="#475569" font-size="11">• Automated snapshot creation before volume release</text>
+  <text x="455" y="419" fill="#64748b" font-size="10">• Reversible lifecycle states for zero business interruption</text>
+
+  <rect x="440" y="455" width="340" height="125" rx="6" fill="#f8fafc" stroke="#c7d2fe" stroke-width="1"/>
+  <text x="455" y="483" fill="#4338ca" font-size="13" font-weight="600">Tag Governance &amp; Unit Economics</text>
+  <text x="455" y="509" fill="#475569" font-size="11">• Enforces mandatory tags: `Owner`, `Project`, `CostCenter`</text>
+  <text x="455" y="529" fill="#475569" font-size="11">• Pinpoints untagged shadow infrastructure expenditure</text>
+  <text x="455" y="549" fill="#64748b" font-size="10">• Allocates infrastructure burn to business feature teams</text>
+
+  <!-- COLUMN 3: Telemetry, Alerts & Governance -->
+  <rect x="830" y="110" width="330" height="490" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#softShadow)"/>
+  <rect x="830" y="110" width="330" height="40" rx="8" fill="#f1f5f9"/>
+  <text x="850" y="136" fill="#059669" font-size="13" font-weight="700">3. TELEMETRY, ALERTS &amp; ROI</text>
+
+  <rect x="850" y="170" width="290" height="90" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="865" y="198" fill="#0f172a" font-size="14" font-weight="600">Real-Time Slack &amp; SNS Alerts</text>
+  <text x="865" y="222" fill="#475569" font-size="11">• Instant notifications on idle resource discovery</text>
+  <text x="865" y="242" fill="#64748b" font-size="11">• Interactive Slack action buttons for 1-click approvals</text>
+
+  <rect x="850" y="275" width="290" height="90" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="865" y="303" fill="#0f172a" font-size="14" font-weight="600">CloudWatch Cost Anomaly Alarms</text>
+  <text x="865" y="327" fill="#475569" font-size="11">• Machine learning anomaly detection on daily spend</text>
+  <text x="865" y="347" fill="#64748b" font-size="11">• Triggers automated throttling when budgets breached</text>
+
+  <rect x="850" y="380" width="290" height="100" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="865" y="408" fill="#0f172a" font-size="14" font-weight="600">Jira / ITSM Ticket Auto-Dispatch</text>
+  <text x="865" y="432" fill="#475569" font-size="11">• Creates traceable remediation tickets for owners</text>
+  <text x="865" y="452" fill="#64748b" font-size="11">• SLA countdown before automatic resource termination</text>
+
+  <rect x="850" y="495" width="290" height="85" rx="6" fill="#f8fafc" stroke="#a7f3d0" stroke-width="1"/>
+  <text x="865" y="523" fill="#065f46" font-size="13" font-weight="600">Grafana Executive ROI Dashboard</text>
+  <text x="865" y="547" fill="#475569" font-size="11">• Cumulative dollars saved per month tracker</text>
+  <text x="865" y="565" fill="#64748b" font-size="10">• Real-time cost-efficiency index &amp; burn charts</text>
+
+  <!-- Connectors -->
+  <line x1="390" y1="355" x2="420" y2="355" stroke="#0284c7" stroke-width="2" stroke-dasharray="4"/>
+  <line x1="800" y1="355" x2="830" y2="355" stroke="#059669" stroke-width="2" stroke-dasharray="4"/>
+</svg>
